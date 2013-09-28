@@ -22,7 +22,11 @@ var src = fs.readFileSync(__dirname + '/../readme.markdown', 'utf8');
         var slide = createSlide(img);
         var src = img.getAttribute('src');
         if (path.basename(src) === 'terminal.png') {
-            createShell(ix, '/home/substack').appendTo(document.body);
+            var sh = createShell(ix, '/home/substack');
+            sh.appendTo(document.body);
+            var h = parseInt(window.innerHeight);
+            sh.terminal.element.style.height = h - 150;
+            sh.terminal.element.style.width = h * 4 / 3 - 200;
         }
     });
 })(marked(src));
