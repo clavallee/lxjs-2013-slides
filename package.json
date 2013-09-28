@@ -1,0 +1,8 @@
+{
+  "name": "lxjs-talk-2013",
+  "private": true,
+  "scripts": {
+    "build": "browserify browser/main.js -o static/bundle.js",
+    "watch": "watchify browser/main.js -o static/bundle.js -v -d"
+  }
+}
