@@ -1,24 +1,29 @@
-# modularity smuggler
+![modularidade](static/images/modularidade.png)
+
+![browserify](static/images/browserify.png)
 
 browserify is a tool for smuggling node-style modularity into hostile browser
 territory
 
-what are some other places that matter where we are confronted with 
+![dragon](static/images/dragon.png)
 
-# one thing well
+![hacker wizard](static/images/hacker_wizard.png)
 
-the unix philosophy!
+![browserify demo](static/images/terminal.png)
 
-# c
+![free software](static/images/free_software.png)
 
-c was written FOR unix
+![npm](static/images/npm.png)
 
-and yet...
+![anarchy](static/images/anarchy.png)
 
-C is terrible
+![king isaacs](static/images/king_isaacs.png)
 
-* for writing complicated things
-* for writing simple things
+![whatever](static/images/whatever.png)
+
+![king whatever](static/images/king_whatever.png)
+
+![c](static/images/c.png)
 
 C is excellent
 
@@ -27,34 +32,28 @@ C is excellent
 * for writing operating systems
 * for writing code that still works decades later
 
-# modularity survival kit
+![unix](static/images/unix.png)
 
-fallout shelter
+c was written FOR unix
 
-where else do we find hostility?
+![c sickle](static/images/c_sickle.png)
 
-if you could take one thing with you to the programming fallout shelter
+and yet...
 
-if you have one wish
-you should wish for more wishes...
+C is terrible
 
-# 2038
+* for writing complicated things
+* for writing simple things
 
-oh fuck...
+![2038](static/images/2038.png)
 
-we're going to have to refactor everything
+We're going to have to refactor everything ANYWAYS.
 
-soon
+![include](static/images/include.png)
 
-we'll need an injection of modularity...
+![require](static/images/require.png)
 
-# dotc!
-
-dotc is a c/c++ preprocessor
-
-written in javascript!
-
-## doing one thing well
+![export](static/images/export.png)
 
 ``` c
 #export= foo
@@ -63,7 +62,9 @@ int foo(int n) {
 }
 ```
 
-## let the consumer decide what to call the import
+![require as](static/images/require_as.png)
+
+![sweet as](static/images/sweet_as.png)
 
 ``` c
 #require "./foo.c" as flibble
@@ -74,27 +75,41 @@ int main (int argc, char **argv) {
 }
 ```
 
-# the magic
+![dotc](static/images/dotc.png)
+
+dotc is a c/c++ preprocessor
+written in javascript!
 
 ```
-gcc -no-integrated-cpp -B $MAGIC_BINDIR $@
+$ dotc pre main.c
+
+#include "stdio.h"
+#include "stdlib.h"
+
+namespace _7ce9a233 {
+
+int foo (int n) {
+    return n * 111;
+}
+
+};
+
+
+int main(int argc, char **argv) {
+    printf("%d\n", (_7ce9a233::foo)(atoi(argv[1])));
+    return 0;
+}
 ```
 
-MAGIC_BINDIR has 2 programs: cc1 and cc1plus
+![whatever.c](static/images/whatever.c.png)
 
-there is one stackoverflow post and one or two postings on mailing lists
+![dotc demo](static/images/terminal.png)
 
-# let's just put c code on npm
+![npm](static/images/npm.png)
 
-why not?
+let's just put c code on npm
 
-# how to publish
-
-Just put a `.c` at the end of your package name!
-
-[publishing a package demo]
-
-# search packages
+with a `.c` extension
 
 ```
 dotc search color
@@ -111,6 +126,8 @@ which finds:
 ```
 colors.cc  colors for C++  =divanvisagie  2013-09-19 18:18  0.0.0
 ```
+
+![king whatever](static/images/king_whatever.png)
 
 # rationalizing putting c modules on npm
 
@@ -139,4 +156,5 @@ all libraries, code snippets, blog posts
 
 can be hashed
 
+![modularidade](static/images/modularidade.png)
 
