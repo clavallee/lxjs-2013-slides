@@ -23,7 +23,7 @@ var src = fs.readFileSync(__dirname + '/../readme.markdown', 'utf8');
         var src = img.getAttribute('src');
         if (path.basename(src) === 'terminal.png') {
             var sh = createShell(ix, '/home/substack');
-            sh.appendTo(document.body);
+            sh.appendTo('#slides');
             var size = getSize();
             sh.resize(size.width, size.height);
         }
@@ -36,7 +36,7 @@ function createSlide (img) {
     var slide = document.createElement('div');
     slide.classList.add('slide');
     slide.appendChild(img);
-    document.body.appendChild(slide);
+    document.querySelector('#slides').appendChild(slide);
     slides.push(slide);
     return slide;
 }
@@ -71,6 +71,7 @@ function createShell (n, cwd) {
     function resize () {
         var size = getSize();
         term.resize(size.width, size.height);
+        term.terminal.element.style.left = (window.innerWidth - size.width) / 2;
         term.terminal.element.style.width = size.width;
     }
     resize();
