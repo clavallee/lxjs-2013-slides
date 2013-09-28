@@ -22,7 +22,6 @@ var server = http.createServer(function (req, res) {
     if (/^\/static\//.test(req.url)) {
         req.url = req.url.replace(/^\/static/, '');
     }
-console.log(req.url);
     ecstatic(req, res);
 });
 server.listen(8000, '127.0.0.1');

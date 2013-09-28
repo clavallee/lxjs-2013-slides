@@ -2,8 +2,8 @@
   "name": "lxjs-talk-2013",
   "private": true,
   "scripts": {
-    "build": "browserify browser/main.js -o static/bundle.js",
-    "watch": "watchify browser/main.js -o static/bundle.js -v -d"
+    "build": "browserify -t brfs browser/main.js -o static/bundle.js",
+    "watch": "watchify -t brfs browser/main.js -o static/bundle.js -v -d"
   },
   "dependencies": {
     "ecstatic": "~0.4.9",
