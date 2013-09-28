@@ -3,14 +3,16 @@
   "private": true,
   "scripts": {
     "build": "browserify -t brfs browser/main.js -o static/bundle.js",
-    "watch": "watchify -t brfs browser/main.js -o static/bundle.js -v -d"
+    "watch": "watchify -t brfs browser/main.js -o static/bundle.js -v -d",
+    "start": "node server.js"
   },
   "dependencies": {
     "ecstatic": "~0.4.9",
-    "exterminate": "~1.3.2",
+    "exterminate": "~1.4.0",
     "marked": "~0.2.9",
     "mux-demux": "~3.7.8",
     "shoe": "~0.0.15",
-    "shux": "~0.2.0"
+    "shux": "~0.2.0",
+    "brfs": "~0.0.8"
   }
 }

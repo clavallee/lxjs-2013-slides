@@ -24,9 +24,8 @@ var src = fs.readFileSync(__dirname + '/../readme.markdown', 'utf8');
         if (path.basename(src) === 'terminal.png') {
             var sh = createShell(ix, '/home/substack');
             sh.appendTo(document.body);
-            var h = parseInt(window.innerHeight);
-            sh.terminal.element.style.height = h - 150;
-            sh.terminal.element.style.width = h * 4 / 3 - 200;
+            var size = getSize();
+            sh.resize(size.width, size.height);
         }
     });
 })(marked(src));
@@ -58,18 +57,33 @@ function show (n) {
 
 function createShell (n, cwd) {
     var term = require('exterminate')(80, 25);
-    var sh = mx.createStream({ command: [ 'bash', '-i' ], cwd: cwd });
+    var sh = mx.createStream({
+        command: [ 'bash', '-i' ],
+        cwd: cwd,
+        columns: 120,
+        rows:35 
+    });
     sh.write('clear\n');
     
     term.pipe(sh).pipe(term);
     terminals[n] = term;
     
     function resize () {
-        term.resize(window.innerWidth - 5, window.innerHeight - 2);
+        var size = getSize();
+        term.resize(size.width, size.height);
+        term.terminal.element.style.width = size.width;
     }
     resize();
     window.addEventListener('resize', resize);
     return term;
+}
+
+function getSize () {
+    var h = parseInt(window.innerHeight);
+    return {
+        height: h - 150,
+        width: h * 4 / 3 - 200
+    };
 }
 
 window.addEventListener('keydown', function (ev) {

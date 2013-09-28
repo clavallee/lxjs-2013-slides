@@ -143,6 +143,7 @@ with require() from javascript or something
 * node, browsers, and now c!
 * we need to amateurize computer programming
 * make it easier to consume, easier to share
+* glsl, embedded systems, arduino
 
 # content-addressable data
 
