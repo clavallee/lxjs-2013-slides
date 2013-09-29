@@ -36,8 +36,12 @@ function createSlide (img) {
     var slide = document.createElement('div');
     slide.classList.add('slide');
     slide.appendChild(img);
+    
+    slide.style.backgroundImage = 'url(' + img.getAttribute('src') + ')';
+    
     document.querySelector('#slides').appendChild(slide);
     slides.push(slide);
+    
     return slide;
 }
 
