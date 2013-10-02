@@ -147,6 +147,12 @@ with require() from javascript or something
 
 # content-addressable data
 
+![revoluçao](static/images/revoluçao.png)
+
+![guillotine](static/images/guillotine.png)
+
+![npms](static/images/npms.png)
+
 let's use npm for now
 
 but next...
