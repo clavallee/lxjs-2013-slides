@@ -106,3 +106,18 @@ window.addEventListener('keypress', function (ev) {
     if (!activeTerm) return;
     activeTerm.terminal.keyPress(ev);
 });
+
+var clock = document.querySelector('#clock');
+var interval;
+clock.addEventListener('click', function (ev) {
+    if (interval) clearInterval(interval);
+    var start = Date.now();
+    interval = setInterval(function () {
+        var elapsed = Date.now() - start;
+        var m = Math.floor(elapsed / 1000 / 60);
+        var s = Math.floor(elapsed / 1000 % 60);
+        var mm = (m < 10 ? '0' : '') + m;
+        var ss = (s < 10 ? '0' : '') + s;
+        clock.textContent = mm + ':' + ss;
+    }, 1000);
+});
