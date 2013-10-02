@@ -163,5 +163,29 @@ all libraries, code snippets, blog posts
 
 can be hashed
 
-![modularidade](static/images/modularidade.png)
+![anarchy os!](static/images/anarchyos.png)
 
+anarchy os is just a brand we can use to describe what npm has become
+and where it can go
+
+We don't need to write anything new. You can just install whatever you want
+inside of whatever base operating system you already have. Everything is
+vendored, node_modules style.
+
+Everybody can publish. Everything competes. Nothing is blessed. Not even npm
+itself is blessed! (npmd)
+
+on npm we've already got:
+
+* packaging and module scheme for c (dotc)
+* a tiling window manager
+* the start of distributed peer-to-peer npm (npmd)
+* wireless networking tool (wit)
+
+![anarchy demo](static/images/terminal.png)
+
+what we still need:
+* getting modules from peers
+* alternate repos, hash versions in package.json dependencies
+
+![modularidade](static/images/modularidade.png)
