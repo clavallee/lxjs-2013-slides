@@ -1,7 +1,8 @@
-var shoe = require('shoe');
 var fs = require('fs');
 var path = require('path');
 var marked = require('marked');
+var shoe = require('shoe');
+var exterminate = require('exterminate');
 
 var sock = shoe('/sock');
 var muxDemux = require('mux-demux');
@@ -61,7 +62,7 @@ function show (n) {
 }
 
 function createShell (n, cwd) {
-    var term = require('exterminate')(80, 25);
+    var term = exterminate(80, 25);
     var sh = mx.createStream({
         command: [ 'bash', '-i' ],
         cwd: cwd,

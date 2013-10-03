@@ -15,6 +15,8 @@ territory
 
 ![npm](static/images/npm.png)
 
+package manager for javascript
+
 ![anarchy](static/images/anarchy.png)
 
 ![king isaacs](static/images/king_isaacs.png)
@@ -33,6 +35,8 @@ C is excellent
 * for writing code that still works decades later
 
 ![unix](static/images/unix.png)
+
+unix is about using tiny pieces that do 1 thing well
 
 c was written FOR unix
 
