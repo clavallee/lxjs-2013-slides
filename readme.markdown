@@ -9,7 +9,7 @@ territory
 
 ![hacker wizard](static/images/hacker_wizard.png)
 
-![browserify demo](static/images/terminal.png)
+![{"cwd":"example/browserify"}](static/images/terminal.png)
 
 ![free software](static/images/free_software.png)
 
@@ -103,7 +103,7 @@ int main(int argc, char **argv) {
 
 ![whatever.c](static/images/whatever.c.png)
 
-![dotc demo](static/images/terminal.png)
+![{"cwd":"example/dotc"}](static/images/terminal.png)
 
 ![npm](static/images/npm.png)
 
@@ -182,7 +182,7 @@ on npm we've already got:
 * the start of distributed peer-to-peer npm (npmd)
 * wireless networking tool (wit)
 
-![anarchy demo](static/images/terminal.png)
+![{"cwd":"example/npmd"}](static/images/terminal.png)
 
 what we still need:
 * getting modules from peers

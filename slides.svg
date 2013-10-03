@@ -79,7 +79,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -7663,7 +7663,7 @@
     <rect
        inkscape:export-ydpi="115.03"
        inkscape:export-xdpi="115.03"
-       inkscape:export-filename="/home/substack/projects/talks/lxjs_2013/images/whatever.c.png"
+       inkscape:export-filename="/home/substack/projects/talks/lxjs_2013/static/images/anarchyos.png"
        y="4706.7578"
        x="135.60359"
        height="600"

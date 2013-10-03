@@ -22,7 +22,8 @@ var src = fs.readFileSync(__dirname + '/../readme.markdown', 'utf8');
         var slide = createSlide(img);
         var src = img.getAttribute('src');
         if (path.basename(src) === 'terminal.png') {
-            var sh = createShell(ix, '/home/substack');
+            var alt = JSON.parse(img.getAttribute('alt'));
+            var sh = createShell(ix, alt.cwd);
             sh.appendTo('#slides');
             var size = getSize();
             sh.resize(size.width, size.height);
